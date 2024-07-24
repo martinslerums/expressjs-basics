@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #3f3f3f;
+  color: white;
+}
+.buttonwrapper {
+  display: flex;
+  width: 100%;
+}
+button {
+  size: 50px;
+  padding: 15px 30px;
+  font-size: 14px;
+  margin: 0 auto;
+}
