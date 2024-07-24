@@ -1,9 +1,9 @@
-// Callbacks and Next Argument
-// Demonstrates using multiple callback functions in a route handler
+/* Understanding Request & Response Callbacks and next() */
+// Request and response callbacks handle the logic for processing incoming requests and generating responses in Express.
+// The `next()` function is used to pass control to the next middleware function or route handler in the stack, allowing for sequential processing of requests.
 
 // This example showcases how to handle requests with more than one callback function.
 // The `next()` function is used to pass control to the next middleware or route handler.
-
 app.get(
   "/double-cb",
   (req, res, next) => {
@@ -18,7 +18,6 @@ app.get(
 
 // Callback Functions
 // Defining standalone callback functions to be used in route handlers
-
 const cb1 = (req, res, next) => {
   console.log("First Callback"); // Log a message indicating the first callback is executed
   next(); // Call next() to pass control to the next callback function
@@ -39,7 +38,6 @@ const cb3 = (req, res) => {
 
 // The app.get() method defines a route with multiple callbacks in an array.
 // The callbacks are executed sequentially in the order they appear in the array.
-
 app.get("/array-cb", [cb1, cb2, cb3]);
 
 // Craziness with Combined Callbacks
